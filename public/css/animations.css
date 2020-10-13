@@ -14,5 +14,5 @@
 .animate-up {
   animation-name: up;
   animation-duration: 300ms;
-  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
 }
