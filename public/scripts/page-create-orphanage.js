@@ -48,6 +48,7 @@ map.on('click', (event) => {
     container.appendChild(newFieldContainer)
   }
 
+// remover e limpar o campo de foto
   function deleteField(event){
     const span = event.currentTarget
     const fieldsContainer = document.querySelectorAll('.new-upload')
@@ -59,3 +60,21 @@ map.on('click', (event) => {
     // deletar o campo
     span.parentNode.remove()
   }
+
+  // selecionar botão sim ou não
+function toggleSelect(event){
+  // retirar a classe .active do votão clicado dos botões
+  document.querySelectorAll('button-select button').forEach((button) => {
+    button.classList.remove('active')
+  })
+  // colocar a classe .active nesse botão clicado
+  const button = event.currentTarget
+  button.classList.add('active')
+  // atualizar o meu input hidden com o valor selecionados
+  const input = document.querySelector('[name="open_on_weekends"]')
+  // verificar se sim ou não
+  input.value = button.dataset.value
+
+
+
+}
